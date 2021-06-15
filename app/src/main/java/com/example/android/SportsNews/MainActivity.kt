@@ -60,20 +60,6 @@ class MainActivity: AppCompatActivity(), NewsItemClickListener {
             },
             { }
         )
-
-
-            @Override
-            @Throws(AuthFailureError::class)
-            fun getHeaders(): Map<String, String>? {
-                val params: MutableMap<String, String> = HashMap()
-                params["X-RapidAPI-Host"] = "Your api Host"
-                params["X-RapidAPI-Key"] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx" //changedkey
-                return params
-            }
-
-
-
-
         MySingleton.getInstance(this).addToRequestQueue(jsonRequest)
 
     }
